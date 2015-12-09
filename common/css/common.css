@@ -95,11 +95,14 @@
 	z-index: 10;
 }
 
-.main-menu .nav-item.active a.nav-link, .main-menu .nav-item a.nav-link:hover {
+.main-menu .nav-item.active a.nav-link,
+.main-menu .nav-item a.nav-link:hover,
+.main-menu .nav-item.has-child a.hover {
 	color: #E60012;
 }
 
-.main-menu .nav-item a.nav-link.has-child:hover {
+.main-menu .nav-item.has-child a.nav-link:hover,
+.main-menu .nav-item.has-child a.hover {
 	background: rgba(0, 0, 0, 0) url(../images/common/arr_gnbSelectLang.png) no-repeat center bottom;
 }
 
@@ -151,4 +154,30 @@
 	font-size: 15px;
 	font-weight: 700;
 	color: #222;
+}
+
+/*content-wrapper*/
+.content-wrapper {
+	width: 100%;
+	position: relative;
+	min-height: 1px;
+}
+
+.content-wrapper .main-banner {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.main-banner .carousel-control {
+	background: rgba(0, 0, 0, 0);
+}
+
+.main-banner .carousel-control span[aria-hidden=true] {
+	width: 60px;
+	height: 110px;
+	font-size: 100px;
+	color: #E60012;
+	margin-top: -50px;
 }
