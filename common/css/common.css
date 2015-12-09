@@ -69,6 +69,14 @@
 	color: #E60012;
 }
 
+.nav-top .app-dl a:hover .fa-android {
+	color: #6FD332;
+}
+
+.nav-top .app-dl a:hover .fa-apple {
+	color: #fefefe;
+}
+
 .nav-main {
 	padding-top: 20px;
 	border-bottom: 1px solid #333;
@@ -154,6 +162,11 @@
 	font-size: 15px;
 	font-weight: 700;
 	color: #222;
+}
+
+.navbar-fixed-top{
+	display: none;
+	background: rgba(0,0,0,0.6);
 }
 
 /*content-wrapper*/
