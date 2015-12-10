@@ -169,6 +169,7 @@
 /*content-wrapper*/
 .content-wrapper,
 .content-wrapper .main-banner,
+.content-wrapper .content-about,
 .content-wrapper .content-articles,
 .content-wrapper .content-medias,
 .content-articles .articles,
@@ -180,12 +181,13 @@
 	position: relative;
 }
 
-.content-wrapper .main-banner,
-.content-wrapper .content-articles {
-	max-width: 1600px;
+.content-wrapper .main-banner {
+	max-width: 100%;
+	background: url("../images/common/bg_slide.png");
 }
 
 .content-wrapper .main-banner:after,
+.content-wrapper .content-about,
 .content-wrapper .content-articles:after,
 .content-wrapper .content-medias:after,
 .content-title:after,
@@ -208,12 +210,29 @@
 	margin-top: -50px;
 }
 
+.content-wrapper .content-about {
+	padding: 0;
+	width: 100%;
+	margin: 1px 0 0;
+	clear: both;
+	/*min-width: 1100px;*/
+	/*max-width: 1600px;*/
+}
+
+.content-about div.avatar-cover {
+	width: 70%;
+	height: 600px;
+	float: left;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 2px 2px #ddd;
+}
+
 .content-wrapper .content-articles {
 	background: #f7f7f9 none repeat scroll 0%;
 	margin: 0px auto 0px;
 	padding: 60px 0px 40px;
 	min-width: 1100px;
-	max-width: 1600px;
 }
 
 .content-articles .content-title {
@@ -233,7 +252,7 @@
 .content-title .title {
 	font-size: 27px;
 	font-weight: 700;
-	color: #222;
+	color: #E60012;
 }
 
 .content-title .sort-tab {
@@ -282,7 +301,7 @@
 
 .articles .article {
 	position: relative;
-	width: 25%;
+	width: 20%;
 	float: left;
 	margin: 0;
 	margin-bottom: 12px;
@@ -335,8 +354,8 @@
 	position: relative;
 	font-weight: normal;
 	color: #666;
-	font-size: 14px;
-	width: 352px;
+	font-size: 12px;
+	width: 100%;
 	display: block;
 	padding: 0 15px;
 	height: 124px;
@@ -393,7 +412,7 @@
 }
 
 .sns a.sns.already {
-	color: #5890FF;
+	color: #E60012;
 }
 
 .content .sns a.like.already:before {
@@ -424,7 +443,7 @@
 	float: left;
 	display: block;
 	position: relative;
-	width: 25%;
+	width: 20%;
 	padding: 0 5px;
 }
 
@@ -441,7 +460,7 @@
 .media-post .content {
 	width: 100%;
 	margin: 0;
-	height: 215px;
+	height: 180px;
 	position: relative;
 	background-size: cover;
 	transition-duration: 0.6s;
