@@ -358,3 +358,32 @@
 .mark.video {
 	background-image: url(../images/ico/movie_play_mark.png);
 }
+
+.modal.media .modal-dialog {
+	width: 100%;
+	min-width: 1000px;
+	max-width: 1600px;
+	top: 50%;
+	margin-top: -325px;
+}
+
+.media .modal-dialog .viewer {
+	width: 70%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background: #000;
+	height: 650px;
+
+}
+
+.media .modal-dialog .viewer img {
+	position: absolute;
+	display: table-cell;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.media .modal-dialog .modal-body {
+	padding: 0;
+}

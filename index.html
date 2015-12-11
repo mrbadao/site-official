@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="common/css/font-awesome.min.css"/>
 
 	<!--site css-->
-	<link rel="stylesheet" href="common/css/site/common.css"/>
-	<link rel="stylesheet" href="common/css/site/home.css"/>
+	<link rel="stylesheet" href="common/css/common.css"/>
+	<link rel="stylesheet" href="common/css/home.css"/>
 </head>
 <body>
 <div class="header">
@@ -399,12 +399,18 @@
 
 	<div class="container content-medias">
 		<div class="media-post">
-			<div class="content" style="background-image: url(http://img04.deviantart.net/f183/i/2014/342/d/5/akame_ga_kill___akame_cosplay_by_voizofsnow-d8943bf.jpg)"></div>
+			<div data-toggle="http://img04.deviantart.net/f183/i/2014/342/d/5/akame_ga_kill___akame_cosplay_by_voizofsnow-d8943bf.jpg"
+				 target-modal="#imgModal"
+				 data-type="image"
+				 class="content"
+				 style="background-image: url(http://img04.deviantart.net/f183/i/2014/342/d/5/akame_ga_kill___akame_cosplay_by_voizofsnow-d8943bf.jpg)"></div>
 		</div>
 		<div class="media-post">
-			<div class="content" style="background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRPnawTpD1ivieF0tvyaj9lpnd9TB2mx1HympwNEl_ETjzUVXwG0A)">
-
-			</div>
+			<div data-toggle="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRPnawTpD1ivieF0tvyaj9lpnd9TB2mx1HympwNEl_ETjzUVXwG0A"
+				 target-modal="#imgModal"
+				 data-type="image"
+				 class="content"
+				 style="background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRPnawTpD1ivieF0tvyaj9lpnd9TB2mx1HympwNEl_ETjzUVXwG0A)"></div>
 		</div>
 		<div class="media-post">
 			<div class="content" style="background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRPnawTpD1ivieF0tvyaj9lpnd9TB2mx1HympwNEl_ETjzUVXwG0A)">
@@ -412,12 +418,18 @@
 			</div>
 		</div>
 		<div class="media-post">
-			<div class="content" style="background-image: url(http://2.bp.blogspot.com/-wd4ZDPcb2g0/UgpGb5Ny09I/AAAAAAAAOIU/bgEo7z2e84A/s1600/snow-mountain-HD-wallpaper.jpg)">
-
-			</div>
+			<div target-modal="#imgModal"
+				 data-type="image"
+				 data-toggle="http://2.bp.blogspot.com/-wd4ZDPcb2g0/UgpGb5Ny09I/AAAAAAAAOIU/bgEo7z2e84A/s1600/snow-mountain-HD-wallpaper.jpg"
+				 class="content"
+				 style="background-image: url(http://2.bp.blogspot.com/-wd4ZDPcb2g0/UgpGb5Ny09I/AAAAAAAAOIU/bgEo7z2e84A/s1600/snow-mountain-HD-wallpaper.jpg)"></div>
 		</div>
 		<div class="media-post">
-			<div class="content" style="background-image: url(http://extrawall.net/images/wallpapers/506_large-thumbnail_amazing_mountain_and_lights_under_night_sky.jpg)">
+			<div class="content"
+				 target-modal="#imgModal"
+				 data-type="image"
+				 data-toggle="http://extrawall.net/images/wallpapers/506_large-thumbnail_amazing_mountain_and_lights_under_night_sky.jpg"
+				 style="background-image: url(http://extrawall.net/images/wallpapers/506_large-thumbnail_amazing_mountain_and_lights_under_night_sky.jpg)">
 				<span class="mark video"></span>
 			</div>
 		</div>
@@ -460,12 +472,36 @@
 		</div>
 	</div>
 </footer>
+<!-- Modal -->
+<div class="media modal fade"
+	 id="imgModal" tabindex="-1" role="dialog" aria-labelledby="myImgModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!--<div class="modal-header">-->
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<!--</div>-->
+			<div class="modal-body">
+				<div class="viewer">
+					<img id="imgSrc" src="http://extrawall.net/images/wallpapers/506_large-thumbnail_amazing_mountain_and_lights_under_night_sky.jpg"/>
+				</div>
+			</div>
+			<!--<div class="modal-footer">-->
+			<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+			<!--<button type="button" class="btn btn-primary">Save changes</button>-->
+			<!--</div>-->
+		</div>
+	</div>
+</div>
 
 <!--jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!--bootstrap-->
 <script src="common/js/bootstrap.min.js"></script>
-<!--Js script-->
+<!--site script-->
 <script src="common/js/site/common.js"></script>
+<!--home script-->
+<script src="common/js/site/home.js"></script>
 </body>
 </html>
