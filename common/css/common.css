@@ -76,15 +76,18 @@ body {
 	font-size: 22px;
 }
 
-.nav-top .nav-right {
+.nav-top .nav-right,
+.navbar-fixed-top .nav-right {
 	padding: 0;
 }
 
-.nav-top .nav-right a {
+.nav-top .nav-right a,
+.navbar-fixed-top .nav-right a {
 	font-size: 15px;
 }
 
-.nav-top .nav-right a .fa {
+.nav-top .nav-right a .fa,
+.navbar-fixed-top .nav-right a .fa {
 	font-size: 15px;
 	padding-right: 3px;
 	color: #E60012;
@@ -125,7 +128,7 @@ body {
 .main-menu .nav-item.active a.nav-link,
 .main-menu .nav-item a.nav-link:hover,
 .main-menu .nav-item.has-child a.hover {
-	color: #E60012;
+	color: #E60012 !important;
 }
 
 .main-menu .nav-item.has-child a.nav-link:hover,
@@ -185,7 +188,31 @@ body {
 
 .navbar-fixed-top {
 	display: none;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 1);
+}
+
+.navbar-fixed-top .main-menu > ul {
+	padding: 0;
+	margin: 0;
+}
+
+.navbar-fixed-top .main-menu > ul > li > a {
+
+	color: #FFFFFF !important;
+	line-height: 50px !important;
+}
+
+.navbar-fixed-top .nav-right li a {
+	color: #ddd;
+}
+
+.navbar-fixed-top .nav-right {
+	margin-top: 7px;
+}
+
+.navbar-fixed-top .nav-right li a:hover,
+.navbar-fixed-top .nav-right li.active a {
+	color: #E60012;
 }
 
 /*content-wrapper*/
