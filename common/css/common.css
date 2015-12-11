@@ -6,9 +6,9 @@
 	font-style: normal
 }
 
-body{
-	font-family: "VnLubalin",Helvetica,Arial,sans-serif;
-	background: rgba(0,0,0,.3);
+body {
+	font-family: "VnLubalin", Helvetica, Arial, sans-serif;
+	background: #1A1A1A;
 }
 
 .no-padding {
@@ -100,7 +100,7 @@ body{
 
 .nav-main {
 	padding-top: 20px;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #E60012;
 	border-radius: 0;
 	z-index: 8;
 	background: #fff;
@@ -142,8 +142,8 @@ body{
 	margin-top: -1px;
 	padding: 30px 0;
 	font-size: 13px;
-	border-top: 1px solid #222;
-	border-bottom: 1px solid #222;
+	border-top: 1px solid #E60012;
+	border-bottom: 1px solid #E60012;
 	background: #f9f9f9;
 }
 
@@ -205,13 +205,12 @@ body{
 
 .content-wrapper .main-banner {
 	max-width: 100%;
-	background: url("../images/common/bg_slide.png");
 }
 
-.main-banner .carousel-img{
+.main-banner .carousel-img {
 	position: relative;
 	width: 100%;
-	height:555px;
+	height: 555px;
 	background-position: center;
 	background-size: cover;
 }
@@ -241,21 +240,48 @@ body{
 }
 
 .content-wrapper .content-about {
-	padding: 0;
-	width: 100%;
-	margin: 1px 0 0;
-	clear: both;
-	/*min-width: 1100px;*/
-	/*max-width: 1600px;*/
+	padding: 60px;
+	color: #e5e5e5;
+	border-top: 1px solid #E60012;
 }
 
-.content-about div.avatar-cover {
-	width: 70%;
-	height: 600px;
-	float: left;
-	background-size: cover;
-	background-position: center;
-	box-shadow: 2px 2px #ddd;
+.content-about .about {
+	min-width: 600px;
+	max-width: 800px;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.about-avt .img-circle {
+	width: 153px;
+	height: 150px;
+	margin: 0 auto;
+	display: block;
+	padding: 3px;
+	background: #FFF;
+}
+
+.about {
+	margin: 10px auto !important;
+}
+
+.about .btn-secondary {
+	background: #BE252A;
+	color: #e5e5e5;
+	border-color: #BE252A;
+}
+
+.about .btn-secondary:hover {
+	background: #e5e5e5;
+	border-color: #e5e5e5;
+	color: #BE252A;
+	box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.about h3 {
+	color: #BE252A;
+	/*text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);*/
 }
 
 .content-wrapper .content-articles {
@@ -551,7 +577,7 @@ body{
 .footer {
 	background: #f7f7f9;
 	margin-top: 20px;
-	border-bottom: 1px solid #e5e5e5;
+	border-top: 1px solid #E60012;
 	color: #666;
 }
 
