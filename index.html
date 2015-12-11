@@ -484,7 +484,13 @@
 			<!--</div>-->
 			<div class="modal-body">
 				<div class="viewer">
-					<img id="imgSrc" src="http://extrawall.net/images/wallpapers/506_large-thumbnail_amazing_mountain_and_lights_under_night_sky.jpg"/>
+					<!--<img id="imgSrc" src="http://extrawall.net/images/wallpapers/506_large-thumbnail_amazing_mountain_and_lights_under_night_sky.jpg"/>-->
+				</div>
+				<div class="comment">
+					<div class="fb-comments"
+						 data-width="100%"
+						 data-href="http://developers.facebook.com/docs/plugins/comments/"
+						 data-numposts="5"></div>
 				</div>
 			</div>
 			<!--<div class="modal-footer">-->
@@ -503,5 +509,15 @@
 <script src="common/js/site/common.js"></script>
 <!--home script-->
 <script src="common/js/site/home.js"></script>
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s);
+	js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=920891334610924";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

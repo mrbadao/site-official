@@ -17,18 +17,31 @@ $(document).ready(function () {
 				dataModal = $(this).attr("target-modal");
 		switch (dataType) {
 			case "image":
+				$(dataModal).find("div.viewer").html('<img id="imgSrc" src=""/>');
 				if (dataSrc && dataModal) {
 					$(dataModal).find("img#imgSrc").on("load", function () {
 						console.log(this.width + "x" + this.clientHeight);
-						var originWHRate = 1118/650;
-						var imgWHRate = this.width/this.height;
-						console.log( "imgWHRate " + imgWHRate)
+						var originWHRate = 1118 / 650;
+						var imgWHRate = this.width / this.height;
+
+						var imgH = 1118 / imgWHRate;
+						var imgW = 650 * imgWHRate;
 						if (this.width > 1118) {
-							$(this).css("width", "100%");
-							$(this).css({
-								position: "relative",
-								//"margin-top": -(325 - /2)/2
-							});
+							if (imgH <= 650) {
+								$(this).css("width", "100%");
+								$(this).css({
+									"top": "50%",
+									"margin-top": 0 - (imgH / 2)
+								});
+							} else {
+								$(this).css("height", "100%");
+								$(this).css({
+									"left": "50%",
+									"margin-top": 0 - (imgW / 2)
+								});
+							}
+
+
 						} else {
 							$(this).css({
 								"top": "50%",

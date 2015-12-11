@@ -374,7 +374,14 @@
 	position: relative;
 	background: #000;
 	height: 650px;
+}
 
+.media .modal-dialog .comment{
+	width: 30%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
 }
 
 .media .modal-dialog .viewer img {
