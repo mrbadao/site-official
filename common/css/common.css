@@ -103,6 +103,7 @@ body{
 	border-bottom: 1px solid #333;
 	border-radius: 0;
 	z-index: 8;
+	background: #fff;
 }
 
 .main-menu {
@@ -205,6 +206,14 @@ body{
 .content-wrapper .main-banner {
 	max-width: 100%;
 	background: url("../images/common/bg_slide.png");
+}
+
+.main-banner .carousel-img{
+	position: relative;
+	width: 100%;
+	height:555px;
+	background-position: center;
+	background-size: cover;
 }
 
 .content-wrapper .main-banner:after,

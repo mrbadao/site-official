@@ -3,6 +3,14 @@
  */
 
 $(document).ready(function () {
+	jQuery.fn.extend({
+		"slideAutoResize": function () {
+			$(this).find("div.carousel-img").css("height", $(this).innerWidth() / 3);
+		}
+	});
+
+	$("#carousel-banner").slideAutoResize();
+	
 	$(window).scroll(function () {
 		if ($(this).scrollTop() >= 175) {
 			$("nav.navbar-fixed-top").css("display", "block").slideDown();
