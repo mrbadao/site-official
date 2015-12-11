@@ -22,9 +22,11 @@ $(document).ready(function () {
 						console.log(this.width + "x" + this.height);
 						if (this.width > 1118) {
 							$(this).css("width", "100%");
-						}else
-
-						{
+							$(this).css({
+								position: "relative",
+								"margin-top": -(325 - this.height) / 2
+							});
+						} else {
 							$(this).css({
 								"top": "50%",
 								"left": "50%",
