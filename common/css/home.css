@@ -382,6 +382,7 @@
 	margin: 0;
 	padding: 0;
 	overflow: auto;
+	min-height: 1px;
 }
 
 .media .modal-dialog .viewer img {

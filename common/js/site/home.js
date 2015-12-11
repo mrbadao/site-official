@@ -18,6 +18,8 @@ $(document).ready(function () {
 		switch (dataType) {
 			case "image":
 				$(dataModal).find("div.viewer").html('<img id="imgSrc" src=""/>');
+				$(dataModal).find("div.comment").html('<div class="fb-comments" data-width="100%" data-href="http://localhost/site-official/" data-numposts="5"></div>');
+
 				if (dataSrc && dataModal) {
 					$(dataModal).find("img#imgSrc").on("load", function () {
 						console.log(this.width + "x" + this.clientHeight);
