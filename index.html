@@ -6,7 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<link rel="icon" type="image/png" href="common/favicon.png"/>
+	<!--default favicon-->
+	<link rel="icon" type="image/png" href="common/images/favicon/favicon_16.png"/>
+	<!--apple favicon-->
+	<link rel='apple-touch-icon-precomposed' href="common/images/favicon/favicon_120.png"/>
+
 	<link rel="stylesheet" href="common/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="common/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="common/css/common.css"/>
@@ -49,7 +53,7 @@
 		<div class="container">
 			<div class="col-sm-12">
 				<a href="#">
-					<img src="http://cdn.aritaum.com/images/common/logo_winter.png" alt="logo">
+					<img src="common/images/common/branch.png" alt="logo">
 				</a>
 			</div>
 			<div class="main-menu">
@@ -214,10 +218,9 @@
 			<article class="article">
 				<div class="content">
 					<a href="#" class="link">
-						<img class="img-thumbnail"
-							 alt="article thumbnail"
-							 title="thumbnail"
-							 src="http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg"/>
+						<div class="img-thumbnail"
+							 style="background-image: url(http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg)">
+						</div>
 					</a>
 
 					<h3 class="title text-capitalize">
@@ -243,10 +246,9 @@
 			<article class="article">
 				<div class="content">
 					<a href="#" class="link">
-						<img class="img-thumbnail"
-							 alt="article thumbnail"
-							 title="thumbnail"
-							 src="http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg"/>
+						<div class="img-thumbnail"
+							 style="background-image: url(http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg)">
+						</div>
 					</a>
 
 					<h3 class="title text-capitalize">
@@ -272,10 +274,9 @@
 			<article class="article">
 				<div class="content">
 					<a href="#" class="link">
-						<img class="img-thumbnail"
-							 alt="article thumbnail"
-							 title="thumbnail"
-							 src="http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg"/>
+						<div class="img-thumbnail"
+							 style="background-image: url(http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg)">
+						</div>
 					</a>
 
 					<h3 class="title text-capitalize">
@@ -301,10 +302,9 @@
 			<article class="article">
 				<div class="content">
 					<a href="#" class="link">
-						<img class="img-thumbnail"
-							 alt="article thumbnail"
-							 title="thumbnail"
-							 src="http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg"/>
+						<div class="img-thumbnail"
+							 style="background-image: url(http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg)">
+						</div>
 					</a>
 
 					<h3 class="title text-capitalize">
@@ -330,10 +330,9 @@
 			<article class="article">
 				<div class="content">
 					<a href="#" class="link">
-						<img class="img-thumbnail"
-							 alt="article thumbnail"
-							 title="thumbnail"
-							 src="http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg"/>
+						<div class="img-thumbnail"
+							 style="background-image: url(http://i1-news.softpedia-static.com/images/news2/Keep-Your-Programming-Code-Safe-Obfuscate-It-480832-2.jpg)">
+						</div>
 					</a>
 
 					<h3 class="title text-capitalize">
@@ -387,34 +386,47 @@
 </section>
 
 <footer class="footer">
+	<div class="f-link">
+		<ul class="nav">
+			<li class="nav-item">
+				<a href="#">about me</a>
+			</li>
+			<li class="nav-item">
+				<a href="#">contact me</a>
+			</li>
+			<li class="nav-item">
+				<a href="#">site map</a>
+			</li>
+		</ul>
+	</div>
+	<div class="solid-line"></div>
+	<div class="f-info">
+		<div class="inner">
+			<div class="l-info">
+				<p>
+					<i class="fa fa-envelope"></i>
+					Email: hieunc18@gmail.com
+				</p>
 
+				<p><i class="fa fa-phone-square"></i> Phone: 0902-85-22-96</p>
+
+				<p><i class="fa fa-skype"></i> Skype: vns-hieunc</p>
+			</div>
+			<div class="r-info">
+					<span>
+						<i class="fa fa-copyright"></i>
+						<strong>Hiếu Nguyễn</strong> Alright Reserve 2015.
+					</span>
+			</div>
+		</div>
+	</div>
 </footer>
-<!--Js script-->
+
 <!--jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!--bootstrap-->
 <script src="common/js/bootstrap.min.js"></script>
-<script>
-	$(document).ready(function () {
-		$(window).scroll(function () {
-			if ($(this).scrollTop() >= 175) {
-				$("nav.navbar-fixed-top").css("display", "block").slideDown();
-			} else {
-				$("nav.navbar-fixed-top").css("display", "none");
-			}
-		});
-
-		$(".main-menu .nav-item.has-child").hover(
-				function () {
-					$(this).find("a.nav-link").addClass("hover");
-					$(this).find("div.menu-layer").css("display", "block");
-				},
-				function () {
-					$(this).find("a.nav-link").removeClass("hover");
-					$(this).find("div.menu-layer").css("display", "none");
-				}
-		)
-	});
-</script>
+<!--Js script-->
+<script src="common/js/site/common.js"></script>
 </body>
 </html>

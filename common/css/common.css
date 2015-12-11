@@ -1,5 +1,26 @@
+@font-face {
+	font-family: 'VnLubalin';
+	src: url('../fonts/VNF-LubalinGraphRegular.ttf');
+	/*src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');*/
+	font-weight: normal;
+	font-style: normal
+}
+
+body{
+	font-family: "VnLubalin",Helvetica,Arial,sans-serif;
+	background: rgba(0,0,0,.3);
+}
+
 .no-padding {
 	padding: 0;
+}
+
+.solid-line {
+	height: 1px;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	background: #ddd;
 }
 
 /*navbar top*/
@@ -144,7 +165,7 @@
 
 .menu-layer > ul > li {
 	float: left;
-	height: 206px;
+	height: 120px;
 	width: 184px;
 }
 
@@ -327,8 +348,12 @@
 	z-index: 30;
 }
 
-.content img.img-thumbnail {
+.content div.img-thumbnail {
 	padding: 0;
+	height: 175px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
 	border: none;
 	border-radius: 0;
 }
@@ -361,14 +386,6 @@
 	height: 124px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-.solid-line {
-	height: 1px;
-	position: relative;
-	margin-left: 10px;
-	margin-right: 10px;
-	background: #ddd;
 }
 
 .solid-line:after {
@@ -412,7 +429,7 @@
 }
 
 .sns a.sns.already {
-	color: #E60012;
+	color: #5890FF;
 }
 
 .content .sns a.like.already:before {
@@ -497,3 +514,90 @@
 	background-image: url(../images/ico/movie_play_mark.png);
 }
 
+/*footer*/
+.footer,
+.footer .f-link,
+.footer .f-info,
+.f-info .inner .l-info,
+.f-info .inner .r-info,
+.footer .f-info .inner {
+	min-height: 1px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.footer:after,
+.footer .f-link:after,
+.footer .f-info .inner:after,
+.footer .f-info:after,
+.f-info .inner .l-info:after,
+.f-info .inner .r-info:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.footer {
+	background: #f7f7f9;
+	margin-top: 20px;
+	border-bottom: 1px solid #e5e5e5;
+	color: #666;
+}
+
+.footer .f-link,
+.footer .f-info .inner {
+	min-width: 1100px;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.f-link > ul.nav > li.nav-item {
+	float: left;
+	margin: 8px 0;
+	display: table;
+}
+
+.f-link > ul.nav > li.nav-item + li.nav-item {
+	border-left: solid 1px #ddd;
+}
+
+.f-link > ul.nav > li.nav-item > a {
+	padding: 0 8px;
+	color: #666;
+	font-size: 14px;
+	text-transform: capitalize;
+	line-height: 17px;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.f-link > ul.nav > li.nav-item > a:hover {
+	color: #E60012;
+}
+
+.footer .f-info {
+	padding: 30px 0;
+}
+
+.f-info .inner .l-info,
+.f-info .inner .r-info {
+	float: left;
+}
+
+.f-info .inner .l-info {
+	width: 70%;
+}
+
+.f-info .inner .r-info {
+	width: 30%;
+}
+
+.f-info .inner p {
+	margin: 0;
+	font-size: 14px;
+	color: #999;
+	width: 100%;
+	display: inline-block;
+}
