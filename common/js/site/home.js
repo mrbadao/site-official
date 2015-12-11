@@ -19,12 +19,15 @@ $(document).ready(function () {
 			case "image":
 				if (dataSrc && dataModal) {
 					$(dataModal).find("img#imgSrc").on("load", function () {
-						console.log(this.width + "x" + this.height);
+						console.log(this.width + "x" + this.clientHeight);
+						var originWHRate = 1118/650;
+						var imgWHRate = this.width/this.height;
+						console.log( "imgWHRate " + imgWHRate)
 						if (this.width > 1118) {
 							$(this).css("width", "100%");
 							$(this).css({
 								position: "relative",
-								"margin-top": -(325 - this.height) / 2
+								//"margin-top": -(325 - /2)/2
 							});
 						} else {
 							$(this).css({
