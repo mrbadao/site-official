@@ -3,6 +3,14 @@
  */
 
 $(document).ready(function () {
+	$(window).scroll(function () {
+		if ($(this).scrollTop() >= 175) {
+			$("nav.navbar-fixed-top").css("display", "block").slideDown();
+		} else {
+			$("nav.navbar-fixed-top").css("display", "none");
+		}
+	});
+
 	$(".main-menu .nav-item.has-child").hover(
 			function () {
 				$(this).find("a.nav-link").addClass("hover");

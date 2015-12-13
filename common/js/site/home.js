@@ -11,14 +11,29 @@ $(document).ready(function () {
 
 	$("#carousel-banner").slideAutoResize();
 
+	fnBindHideMediaModal = function (element) {
+		$(element).on("hidden.bs.modal", function (e) {
+			$(this).find(".viewer img").remove();
+			$(this).find(".viewer iframe").remove();
+		});
+	};
+
 	$("div.media-post div").click(function () {
 		var dataType = $(this).attr("data-type"),
 				dataSrc = $(this).attr("data-toggle"),
 				dataModal = $(this).attr("target-modal");
+
+		dataModalEventObj = $._data($(dataModal).get(0), "events");
+
+		if (typeof dataModalEventObj == "undefined" || typeof dataModalEventObj.hidden == "undefined") {
+			fnBindHideMediaModal(dataModal);
+		}
+		console.log(dataModalEventObj);
+
 		switch (dataType) {
 			case "image":
 				$(dataModal).find("div.viewer").html('<img id="imgSrc" src=""/>');
-				$(dataModal).find("div.comment").html('<div class="fb-comments" data-width="100%" data-href="http://localhost/site-official/" data-numposts="5"></div>');
+				//$(dataModal).find("div.comment").html('<div class="fb-comments" data-width="90%" data-href="http://localhost/site-official/" data-numposts="5"></div>');
 
 				if (dataSrc && dataModal) {
 					$(dataModal).find("img#imgSrc").on("load", function () {
@@ -58,6 +73,15 @@ $(document).ready(function () {
 
 				}
 				return;
+
+			case "object":
+				$(dataModal).find("div.viewer").html('<iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>');
+				if (dataSrc && dataModal) {
+					$(dataModal).find("div.viewer iframe").attr("src", dataSrc);
+					$(dataModal).modal("toggle");
+				}
+				return;
+
 			default:
 				return;
 		}

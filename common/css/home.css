@@ -103,7 +103,7 @@
 
 .content-articles .content-title {
 	color: #1A1A1A;
-	width: 88%;
+	width: 95%;
 	margin: 0 auto;
 	min-height: 1px;
 	position: relative;
@@ -161,7 +161,7 @@
 }
 
 .content-articles .articles {
-	width: 88%;
+	width: 98%;
 	margin-top: 20px;
 }
 
@@ -295,7 +295,7 @@
 
 .content-wrapper .content-medias {
 	margin-top: 20px;
-	width: 100%;
+	width: 98%;
 	min-width: 1100px;
 	max-width: 1600px;
 	padding: 0;
@@ -337,8 +337,8 @@
 	-moz-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
 	filter: grayscale(100%);
-	-webkit-transform: rotate(360deg);
-	transform: rotate(360deg);
+	/*-webkit-transform: rotate(360deg);*/
+	/*transform: rotate(360deg);*/
 }
 
 .content .mark {
@@ -367,7 +367,24 @@
 	margin-top: -325px;
 }
 
+.media .modal-dialog .modal-body,
+.media .modal-dialog .viewer,
+.media .modal-dialog .comment {
+	min-height: 1px;
+	display: block;
+	position: relative;
+}
+
+.media .modal-dialog .modal-body,
+.media .modal-dialog .viewer:after,
+.media .modal-dialog .comment:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
 .media .modal-dialog .viewer {
+	float: left;
 	width: 70%;
 	margin: 0;
 	padding: 0;
@@ -376,13 +393,32 @@
 	height: 650px;
 }
 
-.media .modal-dialog .comment{
+.media .modal-dialog  .modal-header {
+	position: absolute;
+	height: 35px;
+	top:0;
+	right: 0;
+	width:30%;
+	padding: 5px;
+}
+
+.media .modal-dialog  .modal-header .modal-title{
+	font-size: 15px;
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.media .modal-dialog .comment {
+	float: left;
 	width: 30%;
 	position: relative;
-	margin: 0;
+	margin: 35px 0 0;
 	padding: 0;
-	overflow: auto;
+	overflow-y: scroll;
 	min-height: 1px;
+	height: 615px;
 }
 
 .media .modal-dialog .viewer img {
@@ -394,4 +430,5 @@
 
 .media .modal-dialog .modal-body {
 	padding: 0;
+	width:100%;
 }
