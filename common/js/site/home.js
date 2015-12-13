@@ -15,6 +15,7 @@ $(document).ready(function () {
 		$(element).on("hidden.bs.modal", function (e) {
 			$(this).find(".viewer img").remove();
 			$(this).find(".viewer iframe").remove();
+			$(this).find(".comment iframe").remove();
 		});
 	};
 
@@ -28,7 +29,6 @@ $(document).ready(function () {
 		if (typeof dataModalEventObj == "undefined" || typeof dataModalEventObj.hidden == "undefined") {
 			fnBindHideMediaModal(dataModal);
 		}
-		console.log(dataModalEventObj);
 
 		switch (dataType) {
 			case "image":
