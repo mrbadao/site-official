@@ -33,8 +33,8 @@ $(document).ready(function () {
 		switch (dataType) {
 			case "image":
 				$(dataModal).find("div.viewer").html('<img id="imgSrc" src=""/>');
-				//$(dataModal).find("div.comment").html('<div class="fb-comments" data-width="90%" data-href="http://localhost/site-official/" data-numposts="5"></div>');
-
+				$(dataModal).find("div.comment").html('<div class="fb-comments" data-width="100%" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5"></div>');
+				FB.XFBML.parse($(dataModal).find("div.comment").get(0));
 				if (dataSrc && dataModal) {
 					$(dataModal).find("img#imgSrc").on("load", function () {
 						console.log(this.width + "x" + this.clientHeight);
@@ -76,6 +76,8 @@ $(document).ready(function () {
 
 			case "object":
 				$(dataModal).find("div.viewer").html('<iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>');
+				$(dataModal).find("div.comment").html('<div class="fb-comments" data-width="100%" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5"></div>');
+				FB.XFBML.parse($(dataModal).find("div.comment").get(0));
 				if (dataSrc && dataModal) {
 					$(dataModal).find("div.viewer iframe").attr("src", dataSrc);
 					$(dataModal).modal("toggle");
