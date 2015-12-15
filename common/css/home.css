@@ -415,10 +415,16 @@
 	width: 30%;
 	position: relative;
 	margin: 35px 0 0;
-	padding: 0;
+	padding: 10px;
 	overflow-y: scroll;
 	min-height: 1px;
 	height: 615px;
+}
+
+.media .modal-dialog .comment .fb-comments{
+	position: relative;
+	height: 615px;
+	overflow: hidden;
 }
 
 .media .modal-dialog .viewer img {

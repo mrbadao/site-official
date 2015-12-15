@@ -55,6 +55,32 @@ body {
 	position: relative;
 }
 
+.nav-top .app-dl .fa-vn,
+.nav-top .app-dl .fa-us {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.nav-top .app-dl .fa-vn:before {
+	content: url("../images/flags/vn.png");
+}
+
+.nav-top .app-dl .fa-us:before {
+	content: url("../images/flags/us.png");
+}
+
+.nav-top ul.app-dl .nav-item.active .fa-vn,
+.nav-top ul.app-dl .nav-item .fa-vn:hover,
+.nav-top ul.app-dl .nav-item.active .fa-us,
+.nav-top ul.app-dl .nav-item .fa-us:hover{
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-o-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
 .nav-top ul.app-dl .nav-item + .nav-item {
 	margin-left: 12px;
 }
@@ -91,14 +117,6 @@ body {
 	font-size: 15px;
 	padding-right: 3px;
 	color: #E60012;
-}
-
-.nav-top .app-dl a:hover .fa-android {
-	color: #6FD332;
-}
-
-.nav-top .app-dl a:hover .fa-apple {
-	color: #fefefe;
 }
 
 .nav-main {
