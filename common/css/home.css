@@ -360,11 +360,15 @@
 }
 
 .modal.media .modal-dialog {
+	position: absolute;
 	width: 100%;
+	top: 50%;
+	left: 50%;
 	min-width: 1000px;
 	max-width: 1600px;
-	top: 50%;
 	margin-top: -325px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .media .modal-dialog .modal-body,
@@ -393,16 +397,16 @@
 	height: 650px;
 }
 
-.media .modal-dialog  .modal-header {
+.media .modal-dialog .modal-header {
 	position: absolute;
 	height: 35px;
-	top:0;
+	top: 0;
 	right: 0;
-	width:30%;
+	width: 30%;
 	padding: 5px;
 }
 
-.media .modal-dialog  .modal-header .modal-title{
+.media .modal-dialog .modal-header .modal-title {
 	font-size: 15px;
 	overflow: hidden;
 	display: inline-block;
@@ -421,7 +425,7 @@
 	height: 615px;
 }
 
-.media .modal-dialog .comment .fb-comments{
+.media .modal-dialog .comment .fb-comments {
 	position: relative;
 	height: 615px;
 	overflow: hidden;
@@ -436,5 +440,5 @@
 
 .media .modal-dialog .modal-body {
 	padding: 0;
-	width:100%;
+	width: 100%;
 }

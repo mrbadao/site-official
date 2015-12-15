@@ -19,6 +19,16 @@ $(document).ready(function () {
 		});
 	};
 
+	fnBindShowMediaModal = function (element) {
+		$(element).on("shown.bs.modal", function (e) {
+			var dialog = $(this).find(".modal-dialog");
+			console.log();
+			console.log(dialog[0].offsetWidth);
+			$(dialog).css("margin-left", - $(dialog).outerWidth()/2).fadeIn();
+			//console.log($(dialog).innerWidth());
+		});
+	};
+
 	$("div.media-post div").click(function () {
 		var dataType = $(this).attr("data-type"),
 				dataSrc = $(this).attr("data-toggle"),
@@ -30,6 +40,8 @@ $(document).ready(function () {
 			fnBindHideMediaModal(dataModal);
 		}
 
+		fnBindShowMediaModal(dataModal);
+
 		switch (dataType) {
 			case "image":
 				$(dataModal).find("div.viewer").html('<img id="imgSrc" src=""/>');
@@ -37,7 +49,6 @@ $(document).ready(function () {
 				FB.XFBML.parse($(dataModal).find("div.comment").get(0));
 				if (dataSrc && dataModal) {
 					$(dataModal).find("img#imgSrc").on("load", function () {
-						console.log(this.width + "x" + this.clientHeight);
 						var originWHRate = 1118 / 650;
 						var imgWHRate = this.width / this.height;
 
@@ -70,7 +81,6 @@ $(document).ready(function () {
 					});
 					$(dataModal).find("img#imgSrc").attr("src", dataSrc);
 					$(dataModal).modal("toggle");
-
 				}
 				return;
 
